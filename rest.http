@@ -1,0 +1,40 @@
+GET http://localhost:3000
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2MjYzNzIxMTYsImV4cCI6MTYyNjM3MjIxNiwiYXVkIjoiNjBmMDYyNGY1OWZiMmIxZWY3MWMyMTEwIiwiaXNzIjoiaGl0YWNoaXZhbnRhcmEuY29tIn0.pdQIX6we0apXkWd7UfAqqfD7a7vZifjhDJgt_pbYL0w
+
+###
+GET http://localhost:3000/abc_xyz
+
+
+### Login
+POST http://localhost:3000/auth/login
+Content-Type: application/json
+
+{
+  "email": "user06@gmail.com",
+  "password": "123456"
+}
+
+### Register
+POST http://localhost:3000/auth/register
+Content-Type: application/json
+
+{
+  "email": "user08@gmail.com",
+  "password": "123456"
+}
+
+### Refesh token
+POST http://localhost:3000/auth/refresh-token
+Content-Type: application/json
+
+{
+  "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2MjYzNzU2NzUsImV4cCI6MTYyNjM3NTk3NSwiYXVkIjoiNjBmMDYyNGY1OWZiMmIxZWY3MWMyMTEwIiwiaXNzIjoiaGl0YWNoaXZhbnRhcmEuY29tIn0.Jr2L_5JCiSTZh-8istuUKjo1qi99WleTvZCTpvl-Eas"
+}
+
+### Logout
+DELETE  http://localhost:3000/auth/logout
+Content-Type: application/json
+
+{
+  "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2MjYzNzU2ODQsImV4cCI6MTYyNjM3NTk4NCwiYXVkIjoiNjBmMDYyNGY1OWZiMmIxZWY3MWMyMTEwIiwiaXNzIjoiaGl0YWNoaXZhbnRhcmEuY29tIn0.a2En4I_92oMJfZPR9Br1-vA2_EsdGhZcBpHO1zPLisg"
+}
